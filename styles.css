@@ -1,0 +1,110 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+*, :after, :before {
+  box-sizing: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+html {
+  background: #fff url('./images/bg.jpg') no-repeat top center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+h1 { font-size: 50px; }
+h2 { font-size: 40px; }
+h3 { font-size: 28px; position: relative; margin: 35px 0; }
+h3::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: #000;
+  display: block;
+  left: 0;
+  bottom: -10px;
+}
+h4 { font-size: 22px; color: #35393c; margin: 35px 0 15px; }
+h5 { font-size: 18px; color: #7a7b7e; margin: 35px 0 15px; }
+ul {
+  list-style: none;
+  position: relative;
+}
+ul li::before {
+  content: "\2022";
+  color: #01bab6;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: -20px;
+  font-size: 30px;
+  position: absolute;
+  line-height: 22px;
+}
+ul li ul li::before {
+  color: #66c096;
+}
+.content {
+  padding: 20px 20px 20px 40px;
+  max-width: 1000px;
+}
+img {
+  width: 90%;
+}
+header {
+  background: #66c096;
+  margin-bottom: 30px;
+  position: relative;
+  min-height: 300px;
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background-color: #66c096;
+  padding-bottom: 10%;
+  width: 102%;
+  z-index: -10;
+  transform-origin: 0 0;
+  transform: rotate(-2.2deg) skewX(0deg);
+}
+header::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-top: 40px solid #66c096;
+  border-right: 50px solid transparent;
+  position: absolute;
+  left: 30px;
+  bottom: -30px;
+  z-index: 10;
+}
+header img {
+  max-width: 500px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+header .content {
+  max-width: 680px;
+}
+@media screen and (max-width: 1280px) {
+  header {
+    text-align: center;
+  }
+  header .content {
+    max-width: 100%;
+  }
+  header img {
+    position: initial;
+    margin-bottom: 20px;
+  }
+}
+footer {
+  background: #e2e2e2;
+  margin: 30px 20px 50px;
+}
