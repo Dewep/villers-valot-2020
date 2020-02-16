@@ -6,7 +6,7 @@ html, body {
 *, :after, :before {
   box-sizing: inherit;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .toc {
   font-family: 'Montserrat', sans-serif;
 }
 html {
@@ -85,24 +85,28 @@ header::after {
 }
 header img {
   max-width: 500px;
-  position: absolute;
+  /* position: absolute;
   bottom: 20px;
-  right: 20px;
+  right: 20px; */
+  margin: 20px auto;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px #374840;
 }
-header .content {
+/* header .content {
   max-width: 680px;
-}
+} */
 @media screen and (max-width: 1280px) {
   header {
     text-align: center;
   }
-  header .content {
+  /* header .content {
     max-width: 100%;
-  }
-  header img {
+  } */
+  /* header img {
     position: initial;
     margin-bottom: 20px;
-  }
+  } */
 }
 footer {
   background: #e2e2e2;
@@ -132,5 +136,54 @@ footer {
 @media screen and (max-width: 960px) {
   .profile {
     width: 100%;
+  }
+}
+.toc {
+  position: fixed;
+  top: 20px;
+  bottom: 20px;
+  right: 0;
+  background: rgba(255, 255, 255, .9);
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #a6bdb2;
+  padding: 15px 0;
+  width: 320px;
+  box-shadow: -1px 2px 4px rgba(102, 192, 150, .5);
+}
+.toc a {
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  color: #111;
+  padding: 6px 15px;
+}
+.toc a.sub {
+  font-weight: normal;
+  padding: 3px 15px 3px 30px;
+  font-size: 90%;
+  color: #35393c;
+}
+.toc a.main {
+  border-bottom: 1px solid #a6bdb2;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 16px;
+  font-size: 110%;
+}
+.toc a:hover, .toc a:active, .toc a:focus {
+  background: rgba(102, 192, 150, .5);
+}
+.toc a.main:hover, .toc a.main:active, .toc a.main:focus {
+  background: none;
+  text-decoration: underline;
+}
+@media screen and (max-width: 1380px) {
+  .toc {
+    width: 220px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .toc {
+    display: none;
   }
 }

@@ -10,19 +10,27 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="content">
+    <div id="top" class="content">
       <h1>Villers-lès-Luxeuil</h1>
     </div>
 
     <header>
       <div class="content">
         <h2>Continuons ensemble pour Villers-lès-Luxeuil</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget odio ornare, commodo elit malesuada, sodales tellus. Curabitur lectus ante, maximus lobortis tortor mollis, varius consectetur nulla. Phasellus dictum nibh interdum eleifend porttitor. Integer gravida ante sit amet ex mollis porta. Sed sed tortor sed arcu vulputate interdum.</p>
+        <img src="images/From.jpg">
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget odio ornare, commodo elit malesuada, sodales tellus. Curabitur lectus ante, maximus lobortis tortor mollis, varius consectetur nulla. Phasellus dictum nibh interdum eleifend porttitor. Integer gravida ante sit amet ex mollis porta. Sed sed tortor sed arcu vulputate interdum.</p> -->
       </div>
-      <img src="images/From.jpg">
     </header>
 
-    <div class="content">
+    <div class="toc">
+      <a href="#top" class="main">Villers-lès-Luxeuil</a>
+      <a href="#profiles">Profils</a>
+      <a href="#christelle" class="sub">Christelle Audra</a>
+      <a href="#christelle" class="sub">Lorem ipsum 2</a>
+      <a href="#profiles">Lorem ipsum</a>
+    </div>
+
+    <div id="profiles" class="content">
       <div class="profiles">
         <div class="profile">
           <div class="card">
@@ -39,7 +47,7 @@
         </div>
       </div>
       <div class="profiles">
-        <div class="profile">
+        <div id="christelle" class="profile">
           <div class="card">
             <img src="images/profiles/christophe.jpg">
             <b>Christelle Audra</b><br>
@@ -164,5 +172,16 @@
         efzefzefzefze@dezezdzedezd.fr
       </div>
     </footer>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault()
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          })
+        })
+      })
+    </script>
   </body>
 </html>
