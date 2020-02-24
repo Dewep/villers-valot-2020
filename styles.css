@@ -51,6 +51,11 @@ ul li ul li::before {
   padding: 20px 20px 20px 40px;
   max-width: 1000px;
 }
+@media screen and (max-width: 960px) {
+  .content {
+    padding: 20px;
+  }
+}
 img {
   width: 90%;
 }
@@ -133,6 +138,7 @@ footer {
   float: right;
   max-width: 170px;
   border-radius: 5px;
+  margin: 0 0 10px 10px;
 }
 .profile .card {
   margin: 10px;
@@ -150,6 +156,11 @@ footer {
 @media screen and (max-width: 960px) {
   .profile, .profile.main {
     width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .profile img {
+    max-width: 130px;
   }
 }
 .images {
@@ -171,8 +182,14 @@ footer {
   box-shadow: 2px 2px 7px #374840;
 }
 @media screen and (max-width: 960px) {
+  .images {
+    display: block;
+  }
   .images > div {
     width: 100%;
+    max-height: none;
+  }
+  .images img {
     max-height: 400px;
   }
 }
